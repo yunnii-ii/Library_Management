@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="Mini_LibraryManagementSystem.Site2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+        <link href="StyleSheet2.css" rel="stylesheet" />
+        <link href="bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <h3>Library Management System | Control Panel</h3>
+        </div>
+    <div class="wrap">
+        <div class="nav-left" align="center">
+            <div class="logo">
+                <asp:Image ID="Image1" CssClass="image" runat="server" Height="150px" ImageUrl="~/Image/l2.jpg" Width="151px" /><br />
+                <span>Welcome, </span>
+                <asp:Label ID="lblSession" runat="server"></asp:Label>
+                <br />
+                <span class="span">Go To</span>
+            </div>
+            <div class="container">
+                <div class="items">
+                    <%--<h2>Go to</h2><br />--%>
+                    <span class="direction">Book Manipulation</span>
+                    <a href="Dashboard.aspx"><h3>Dashboard</h3></a>
+                
+                    <a href="AddBook.aspx"><h3>Add Books</h3></a>
+                
+                    <a href="UpdateBook.aspx"><h3>Update Books</h3></a>
+                
+                    <a href="DeleteBook.aspx"><h3>View Books</h3></a>
+
+                    <a href="RentBook.aspx"><h3>Rent Books</h3></a>
+
+                    <a href="ReturnBook.aspx"><h3>Return Books</h3></a>
+
+                    <a href="IssueBook.aspx"><h3>Issue Books</h3></a>
+                    
+                    <hr />
+                    <span class="direction">Admin Manipulation</span>
+                    <a href="AddAdmin.aspx"><h3>Admin</h3></a>
+                    <%--<div class="line"></div>
+                    <span class="direction">For Admin</span>--%>
+                    <a href="AddMember.aspx"><h3>Member</h3></a>
+
+                    <hr />
+                    <div>
+                        <a href="AdminLogin.aspx"><h3><img src="Image/on-off-button.png" width="15px" height="15px"/> Logout</h3></a>
+                    </div>
+                    <hr />
+                    <h4>
+                        <asp:Label ID="Label1" class="float-end me-4" runat="server" Text="&nbsp;Admin"></asp:Label>
+                        <asp:Label ID="lblAdmShow" class="float-end" runat="server" ForeColor="#339933"></asp:Label><br />
+                        <asp:Label ID="Label3" class="float-end me-4" runat="server" Text="&nbsp;Members"></asp:Label>
+                        <asp:Label ID="lblMemShow" class="float-end" runat="server" ForeColor="#339933"></asp:Label>
+                    </h4>
+                    <br />
+                    <hr />
+
+                </div>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="menu">
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <%--<div class="footer">
+                <h5>University of Computer Studies, Pyay</h5>
+            </div>--%>
+        </div>
+    </div>
+    
+    </form>
+</body>
+</html>
